@@ -12,7 +12,7 @@ workfllows:
 
 jobs:
   build:
-    working_directory: ~/simple_application
+    working_directory: ~/SimpleApplicationPipeline
     docker:
       - image: circleci/node:10.16.3
     steps:
