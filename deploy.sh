@@ -8,4 +8,4 @@ cd SimpleApplicationPipeline/
 
 npm install
 
-pm2 start ./bin/www --name SimpleApplicationPipeline --env=production
+pm2 start ./bin/www --name SimpleApplicationPipeline
