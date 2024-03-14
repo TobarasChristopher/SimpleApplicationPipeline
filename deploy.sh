@@ -1,12 +1,18 @@
 sudo apt update && sudo apt install nodejs npm
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+nvm install 20.5.0
+nvm use 20.5.0
+
+node -v
+npm -v
+
 sudo npm install -g pm2
 
 pm2 stop SimpleApplicationPipeline
 
-pm2 stop 0
-pm2 stop 1
-pm2 stop 2
+
 
 cd SimpleApplicationPipeline/
 
