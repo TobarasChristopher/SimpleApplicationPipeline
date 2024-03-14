@@ -22,16 +22,16 @@ jobs:
   build:
     working_directory: ~/SimpleApplicationPipeline
     docker:
-      - image: cimg/node:21.6.2
+      - image: circleci/node:latest
     steps:
       - checkout
       - run:
           name: update-npm
-          command: 'sudo npm install -g npm@6'
+          command: 'sudo npm install -g npm@8.1.4'
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
-          name: install-npm-wee
+          name: install-npm
           command: npm install
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
@@ -39,7 +39,7 @@ jobs:
             - ./node_modules
   deploy:
     docker:
-      - image: cimg/node:21.6.2
+      - image: circleci/node:10.16.3
     steps:
       - run:
           name: deploy-application
