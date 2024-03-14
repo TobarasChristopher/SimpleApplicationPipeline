@@ -12,7 +12,6 @@ node -v
 npm install
 
 
-
 echo $PRIVATE_KEY > privatekey.pem
 echo $SERVER > server.crt
 
