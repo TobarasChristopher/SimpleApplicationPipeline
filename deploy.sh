@@ -4,6 +4,10 @@ sudo npm install -g pm2
 
 pm2 stop SimpleApplicationPipeline
 
+pm2 stop 0
+pm2 stop 1
+pm2 stop 2
+
 cd SimpleApplicationPipeline/
 
 npm install
