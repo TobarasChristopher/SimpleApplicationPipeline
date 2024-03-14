@@ -1,5 +1,11 @@
 sudo apt update && sudo apt install nodejs npm
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+source ~/.bashrc
+nvm install 18
+nvm use 18
+
 sudo npm install -g pm2
 
 pm2 stop SimpleApplicationPipeline
